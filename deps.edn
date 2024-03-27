@@ -1,7 +1,7 @@
 
 {:paths ["source-code/cljs"]
  :deps  {mt-app-kit/cljc-preset-props   {:git/url "https://github.com/mt-app-kit/cljc-preset-props"
-                                         :sha     "717dcc304ad2d67784a1422fe746ca721ace03a8"}
+                                         :sha     "4a6e56d167055adba08c0b31371d37e1c735f913"}
          mt-app-kit/cljc-form-validator {:git/url "https://github.com/mt-app-kit/cljc-form-validator"
-                                         :sha     "6f0ab621ee9d08feeea6f5f7ea239d5104ca94f0"}
+                                         :sha     "8a058ecb2324cc694e692e54e122d951e7fb5016"}
          org.clojure/clojurescript      {:mvn/version "1.10.891"}}}
