@@ -1,6 +1,6 @@
 
 (ns pretty-presets.side-effects
-    (:require [preset-props.api :as preset-props]))
+    (:require [component-props.api :as component-props]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -20,4 +20,4 @@
   ; (reg-preset! :my-preset (fn [id props] (assoc props :fill-color :muted :hover-color :muted)))
   ; [button :my-button {:presets [:my-preset]}]
   [id props]
-  (preset-props/reg-preset! id props))
+  (component-props/reg-preset! id props))
