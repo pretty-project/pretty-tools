@@ -6,6 +6,9 @@
 ;; ----------------------------------------------------------------------------
 
 (defn reg-preset!
+  ; @links
+  ; [cljs-component-props](https://mt-app-kit.github.io/cljs-component-props)
+  ;
   ; @description
   ; Registers a preset map or function.
   ;
