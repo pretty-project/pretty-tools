@@ -6,13 +6,19 @@
 ;; ----------------------------------------------------------------------------
 
 (defn reg-validator!
+  ; @links
+  ; [cljc-form-validator](https://mt-app-kit.github.io/cljc-form-validator)
+  ;
   ; @description
   ; ...
   ;
   ; @param (keyword) id
   ; @param (map) props
   ; {:error (*)
-  ;  :test-f (function)}
+  ;  :test-f (function)
+  ;  :when-changed? (boolean)(opt)
+  ;  :when-left? (boolean)(opt)
+  ;  :when-visited? (boolean)(opt)}
   ;
   ; @usage
   ; (reg-validator! :my-validator {:error "Please fill out this field!" :test-f #(-> % empty? not)})
@@ -23,6 +29,9 @@
 ;; ----------------------------------------------------------------------------
 
 (defn validate-input!
+  ; @links
+  ; [cljc-form-validator](https://mt-app-kit.github.io/cljc-form-validator)
+  ;
   ; @description
   ; ...
   ;
@@ -34,12 +43,12 @@
   ; @usage
   ; (validate-input! :my-input {:on-valid-f (fn [_] ...)})
   [id props]
-  ; When an input gets validated, the autovalidation must be turned on.
-  ; Otherwise, the input can stuck in an invalid state even if it's value has changed and not invalid anymore.
-  (form-validator/autovalidate-input! id)
-  (form-validator/validate-input!     id props))
+  (form-validator/validate-input! id props))
 
 (defn validate-form!
+  ; @links
+  ; [cljc-form-validator](https://mt-app-kit.github.io/cljc-form-validator)
+  ;
   ; @description
   ; ...
   ;
@@ -51,5 +60,4 @@
   ; @usage
   ; (validate-form! :my-form {:on-valid-f (fn [_] ...)})
   [id props]
-  (form-validator/autovalidate-form! id)
-  (form-validator/validate-form!     id props))
+  (form-validator/validate-form! id props))
